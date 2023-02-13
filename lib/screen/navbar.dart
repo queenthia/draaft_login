@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:draaft_login/screen/pages/home.dart';
 import 'package:draaft_login/screen/pages/likes.dart';
 import 'package:draaft_login/screen/pages/profile.dart';
@@ -7,8 +5,6 @@ import 'package:draaft_login/screen/pages/settings.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_nav_bar/google_nav_bar.dart';
-
-import '../main.dart';
 
 class Navbar extends StatefulWidget {
   const Navbar({super.key});
@@ -29,7 +25,6 @@ class _NavbarState extends State<Navbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       //asigning the selected index to the list of pages
       body: _pages[_selected],
       bottomNavigationBar: SingleChildScrollView(
@@ -79,6 +74,7 @@ class _NavbarState extends State<Navbar> {
       ),
     );
   }
+
 //method to navigate through the pages
   void _navigate(int index) {
     setState(() {
